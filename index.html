@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Floater</title>
+</head>
+<style type="text/css">
+  
+  body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow:hidden;
+    max-width: 767px;
+    background: lightblue;
+  }
+  
+  .floating-bar{
+    position: absolute;
+    width: 100%;
+    background:#05050569;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inner-wrapper{
+    background: white;
+    max-width: 80%;
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 3rem;
+    position: relative;
+    height: 40rem;
+  }
+  
+  .close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height:20px;
+    width: 20px;
+    font-size:3rem;
+    border-radius:20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    cursor:pointer;
+    padding:20px;
+    transition: 2s ease-in;
+    background: lightgreen;
+  }
+  
+  .close-button span{
+    text-align: center;
+    display: block;
+    color: red;
+    font-weight: bolder;
+    font-size: 5rem;
+  }
+</style>
+<body>
+   <div class="floating-bar">
+     <div class="inner-wrapper">
+       
+       <div class="close-button">
+         <span>&times;</span>
+       </div>
+            <h3>This is a floating bar</h3>
+            <p>This are things we ought to be doing in such times</p>
+            <p>A curated collection of the absolute best free fonts available on Google Fonts in 2021— open-source and 100% free for commercial use.</p>
+     </div>
+
+   </div>
+   
+   <div class="main-content">
+     <button type="button">Click me</button>
+     <h1>This is main content</h1>
+     <p>main content goes in here</p>
+     <p>Google Fonts is a library of more than a thousand free and open source font families, an interactive web directory for browsing the library, and APIs for using the fonts via CSS and Android. Wikipedia</p>
+     <p>Mission Statement Edit
+     "We believe the best way to bring personality and performance to websites and products is through great design and technology. Our goal is to make that process simple, by offering an intuitive and robust collection of open source fonts and icons. By using our extensive catalog, you can share and integrate type and icons into any design project seamlessly—no matter where you are in the world.</p>
+     <p>The Google Fonts catalog is intended to enable font discovery and exploration, and the service is used extensively with over 48 trillion total font views.[5][self-published source] Popular fonts include Roboto, Open Sans, Lato, Oswald, Montserrat, Source Sans Pro, and Raleway.[5]</p>
+   </div>
+   
+   <script>
+   
+    const floatingBar = document.querySelector('.floating-bar');
+     const closeButton = document.querySelector('.close-button');
+   
+     closeButton.addEventListener(
+       'click', closeFloatingBar
+       );
+   
+    function closeFloatingBar(){
+      
+      floatingBar.style.display = 'none';
+    }
+   
+   </script>
+  
+</body>
+
+</html>
